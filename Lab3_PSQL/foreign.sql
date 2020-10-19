@@ -1,0 +1,13 @@
+--foreign
+ALTER TABLE CageVisits
+ADD FOREIGN KEY (cageID)
+REFERENCES Cages(cageID);
+--on delete RESTRICT
+--on update RESTRICT;
+
+
+ALTER TABLE CageVisits
+ADD FOREIGN KEY (memberID)
+REFERENCES Members(memberID)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
